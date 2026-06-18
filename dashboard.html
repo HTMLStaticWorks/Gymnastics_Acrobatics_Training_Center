@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Gymnastics & Acrobatics Training Center</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="dashboard-logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <h2><svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
+    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span></h2>
+                </a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#overview" class="sidebar-nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Dashboard Overview
+                </a>
+                <a href="#progress" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    Child Progress Reports
+                </a>
+                <a href="#achievements" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-3.5 2 1-4-3-2.5 4-.5 1.5-3.5 1.5 3.5 4 .5-3 2.5 1 4z"></path></svg>
+                    Skill Achievements
+                </a>
+                <a href="#attendance" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Attendance
+                </a>
+                <a href="#schedule" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Class Schedule
+                </a>
+                <a href="#payments" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Payments
+                </a>
+                <a href="#messages" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Messages
+                </a>
+                <a href="#settings" class="sidebar-nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Settings
+                </a>
+                
+                <a href="index.html" class="sidebar-nav-link" style="margin-top: auto; color: var(--primary-accent);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div class="flex items-center gap-4">
+                    <button id="sidebar-toggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                    <div class="dashboard-title">
+                        <h1>Parent Dashboard</h1>
+                        <p class="text-secondary">Welcome back, Sarah!</p>
+                    </div>
+                </div>
+                
+                <div class="header-actions flex gap-4 items-center">
+                    <button class="control-btn" id="theme-toggle" aria-label="Toggle Dark Mode" style="width: 36px; height: 36px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL" style="width: 36px; height: 36px; font-size: 12px; font-weight: 600;">RTL</button>
+                    <div class="profile-widget" style="margin-left: 8px;">
+                        <div class="profile-avatar">S</div>
+                        <span>Sarah Jenkins</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <!-- Overview Pane -->
+                <div id="overview" class="tab-pane active">
+                    <div class="grid grid-cols-3 gap-6" style="margin-bottom: 32px;">
+                        <div class="card stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Active</h3>
+                                <p>Enrollment Status</p>
+                            </div>
+                        </div>
+                        <div class="card stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Tomorrow</h3>
+                                <p>Next Class: Adv. Tumbling</p>
+                            </div>
+                        </div>
+                        <div class="card stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Level 4</h3>
+                                <p>Current Skill Progress</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 24px;">Upcoming Classes</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Class Name</th>
+                                        <th>Date & Time</th>
+                                        <th>Coach</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Advanced Tumbling</td>
+                                        <td>Mon, Oct 24 • 4:00 PM</td>
+                                        <td>Coach Michael</td>
+                                        <td><span class="badge badge-success">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Core Strength Training</td>
+                                        <td>Wed, Oct 26 • 5:30 PM</td>
+                                        <td>Coach Sarah</td>
+                                        <td><span class="badge badge-success">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flexibility & Balance</td>
+                                        <td>Fri, Oct 28 • 4:00 PM</td>
+                                        <td>Coach Elena</td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Pane -->
+                <div id="progress" class="tab-pane">
+                    <div class="card">
+                        <h3 style="margin-bottom: 24px;">Child Progress Reports</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <h4 style="margin-bottom: 12px; font-size: 16px;">Floor Routine</h4>
+                                <div style="background: var(--secondary-bg); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px;">
+                                    <div style="background: var(--primary-accent); width: 85%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 14px; color: var(--text-secondary); text-align: right;">85% - Advanced</p>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 12px; font-size: 16px;">Uneven Bars</h4>
+                                <div style="background: var(--secondary-bg); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px;">
+                                    <div style="background: var(--primary-accent); width: 60%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 14px; color: var(--text-secondary); text-align: right;">60% - Intermediate</p>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 12px; font-size: 16px;">Balance Beam</h4>
+                                <div style="background: var(--secondary-bg); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px;">
+                                    <div style="background: var(--primary-accent); width: 40%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 14px; color: var(--text-secondary); text-align: right;">40% - Beginner</p>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 12px; font-size: 16px;">Vault</h4>
+                                <div style="background: var(--secondary-bg); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px;">
+                                    <div style="background: var(--primary-accent); width: 75%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 14px; color: var(--text-secondary); text-align: right;">75% - Proficient</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 24px; padding: 16px; background: var(--secondary-bg); border-radius: var(--border-radius); border-left: 4px solid var(--primary-accent);">
+                            <p style="font-weight: 500; margin-bottom: 4px;">Coach's Note (Oct 18):</p>
+                            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 0;">Sarah is making excellent progress on her floor routine. Her back handspring form has improved significantly. We will focus more on beam stability next week.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Pane -->
+                <div id="achievements" class="tab-pane">
+                    <div class="card">
+                        <h3 style="margin-bottom: 24px;">Skill Achievements</h3>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div style="text-align: center; padding: 24px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--secondary-bg);">
+                                <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: rgba(214, 90, 61, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-accent);">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                </div>
+                                <h4 style="font-size: 16px; margin-bottom: 4px;">Level 3 Floor</h4>
+                                <p style="font-size: 12px; color: var(--text-secondary);">Achieved Sep 15</p>
+                            </div>
+                            <div style="text-align: center; padding: 24px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--secondary-bg);">
+                                <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: rgba(214, 90, 61, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-accent);">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                                </div>
+                                <h4 style="font-size: 16px; margin-bottom: 4px;">Perfect Vault</h4>
+                                <p style="font-size: 12px; color: var(--text-secondary);">Achieved Oct 02</p>
+                            </div>
+                            <div style="text-align: center; padding: 24px; border: 1px dashed var(--border-color); border-radius: var(--border-radius); opacity: 0.6;">
+                                <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                </div>
+                                <h4 style="font-size: 16px; margin-bottom: 4px;">Level 4 Beam</h4>
+                                <p style="font-size: 12px; color: var(--text-secondary);">In Progress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attendance Pane -->
+                <div id="attendance" class="tab-pane">
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <h3>Attendance History</h3>
+                            <span class="badge badge-success">92% Attendance Rate</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Class Name</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mon, Oct 17</td>
+                                        <td>Advanced Tumbling</td>
+                                        <td><span style="color: #10B981; font-weight: 500;">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wed, Oct 12</td>
+                                        <td>Core Strength Training</td>
+                                        <td><span style="color: #10B981; font-weight: 500;">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fri, Oct 07</td>
+                                        <td>Flexibility & Balance</td>
+                                        <td><span style="color: #EF4444; font-weight: 500;">Absent (Excused)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mon, Oct 03</td>
+                                        <td>Advanced Tumbling</td>
+                                        <td><span style="color: #10B981; font-weight: 500;">Present</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Pane -->
+                <div id="schedule" class="tab-pane">
+                    <div class="card">
+                        <h3 style="margin-bottom: 24px;">Weekly Calendar</h3>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div style="display: flex; border: 1px solid var(--border-color); border-radius: var(--border-radius); overflow: hidden;">
+                                <div style="background: var(--primary-accent); color: white; padding: 16px; width: 100px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                                    <span style="font-size: 24px; font-weight: 700;">Mon</span>
+                                    <span style="font-size: 14px; opacity: 0.8;">4:00 PM</span>
+                                </div>
+                                <div style="padding: 16px; flex: 1;">
+                                    <h4 style="margin-bottom: 4px;">Advanced Tumbling</h4>
+                                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 0;">Main Gym • Coach Michael</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; border: 1px solid var(--border-color); border-radius: var(--border-radius); overflow: hidden;">
+                                <div style="background: var(--card-bg); border-right: 1px solid var(--border-color); padding: 16px; width: 100px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                                    <span style="font-size: 24px; font-weight: 700;">Wed</span>
+                                    <span style="font-size: 14px; color: var(--text-secondary);">5:30 PM</span>
+                                </div>
+                                <div style="padding: 16px; flex: 1;">
+                                    <h4 style="margin-bottom: 4px;">Core Strength</h4>
+                                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 0;">Studio B • Coach Sarah</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; border: 1px solid var(--border-color); border-radius: var(--border-radius); overflow: hidden;">
+                                <div style="background: var(--card-bg); border-right: 1px solid var(--border-color); padding: 16px; width: 100px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                                    <span style="font-size: 24px; font-weight: 700;">Fri</span>
+                                    <span style="font-size: 14px; color: var(--text-secondary);">4:00 PM</span>
+                                </div>
+                                <div style="padding: 16px; flex: 1;">
+                                    <h4 style="margin-bottom: 4px;">Flexibility & Balance</h4>
+                                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 0;">Studio A • Coach Elena</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payments Pane -->
+                <div id="payments" class="tab-pane">
+                    <div class="grid grid-cols-2 gap-6" style="margin-bottom: 24px;">
+                        <div class="card" style="background: var(--primary-accent); color: white;">
+                            <p style="opacity: 0.9; margin-bottom: 8px;">Next Payment Due</p>
+                            <h2 style="font-size: 36px; margin-bottom: 16px;">$185.00</h2>
+                            <p style="margin-bottom: 16px; opacity: 0.9;">Due by Nov 01, 2026</p>
+                            <button class="btn" style="background: white; color: var(--primary-accent); width: 100%;">Pay Now</button>
+                        </div>
+                        <div class="card">
+                            <h3 style="margin-bottom: 16px;">Payment Method</h3>
+                            <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius); margin-bottom: 16px;">
+                                <div style="width: 40px; height: 24px; background: #1A1F36; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px; font-style: italic;">VISA</div>
+                                <div style="flex: 1;">
+                                    <p style="font-weight: 500; margin-bottom: 0;">Visa ending in 4242</p>
+                                    <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 0;">Expires 12/28</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline" style="width: 100%;">Update Payment Method</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-bottom: 24px;">Recent Invoices</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice #</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>INV-2026-10</td>
+                                        <td>Oct 01, 2026</td>
+                                        <td>$185.00</td>
+                                        <td><span class="badge badge-success">Paid</span></td>
+                                        <td><a href="#" style="color: var(--primary-accent); font-size: 14px;">Download</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-2026-09</td>
+                                        <td>Sep 01, 2026</td>
+                                        <td>$185.00</td>
+                                        <td><span class="badge badge-success">Paid</span></td>
+                                        <td><a href="#" style="color: var(--primary-accent); font-size: 14px;">Download</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages Pane -->
+                <div id="messages" class="tab-pane">
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                            <h3>Coach Messages</h3>
+                            <button class="btn btn-primary" style="padding: 8px 16px; height: auto;">New Message</button>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--secondary-bg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span style="font-weight: 600;">Coach Michael</span>
+                                    <span style="font-size: 12px; color: var(--text-secondary);">Yesterday, 2:30 PM</span>
+                                </div>
+                                <p style="font-size: 14px; margin-bottom: 0;">Hi! Just wanted to let you know Sarah did a fantastic job at practice today. We are moving her to the next level of floor routines starting next week!</p>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span style="font-weight: 600;">Admin Desk</span>
+                                    <span style="font-size: 12px; color: var(--text-secondary);">Oct 15, 9:00 AM</span>
+                                </div>
+                                <p style="font-size: 14px; margin-bottom: 0;">Reminder: The gym will be closed this coming Sunday for maintenance. Please check the updated schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Pane -->
+                <div id="settings" class="tab-pane">
+                    <div class="card">
+                        <h3 style="margin-bottom: 24px;">Account Settings</h3>
+                        <form action="#">
+                            <div class="grid grid-cols-2 gap-4" style="margin-bottom: 16px;">
+                                <div class="form-group">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" value="Sarah">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" value="Jenkins">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 16px;">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" value="sarah.j@example.com">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 24px;">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" value="(555) 123-4567">
+                            </div>
+                            
+                            <h4 style="margin-bottom: 16px; font-size: 16px; border-top: 1px solid var(--border-color); padding-top: 24px;">Preferences</h4>
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                <input type="checkbox" id="email_notif" checked style="width: 16px; height: 16px;">
+                                <label for="email_notif" style="margin-bottom: 0;">Receive Email Notifications</label>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                                <input type="checkbox" id="sms_notif" checked style="width: 16px; height: 16px;">
+                                <label for="sms_notif" style="margin-bottom: 0;">Receive SMS Alerts for Schedule Changes</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

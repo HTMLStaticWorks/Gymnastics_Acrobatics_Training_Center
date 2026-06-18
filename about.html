@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>About Us | Gymnastics & Acrobatics Training Center</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+<!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+        <div class="nav-brand">
+            <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
+    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
+        </div>
+        
+        <div class="nav-links" style="display: none;">
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Home <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                <div class="dropdown-menu">
+                    <a href="index.html" class="dropdown-item">Home 1</a>
+                    <a href="home-2.html" class="dropdown-item">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="programs.html" class="nav-link">Programs</a>
+            <a href="coaches.html" class="nav-link">Coaches</a>
+            <a href="progression-framework.html" class="nav-link">Progression Framework</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="dashboard.html" class="nav-link dashboard-icon-link" aria-label="Dashboard" style="display: none; padding: 8px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; height: 36px; width: 36px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </a>
+            <button class="control-btn" id="theme-toggle" aria-label="Toggle Dark Mode" style="width: 36px; height: 36px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL" style="width: 36px; height: 36px; font-size: 12px; font-weight: 600;">RTL</button>
+            <a href="login.html" class="btn btn-primary" style="height: 44px; padding: 0 20px;">Login</a>
+            
+            <button class="control-btn mobile-menu-btn" style="display: none; width: 36px; height: 36px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        </div>
+    </nav>
+
+    <style>
+        @media (min-width: 1025px) {
+            .nav-links { display: flex !important; }
+            .mobile-menu-btn { display: none !important; }
+            .nav-actions .nav-link { display: block !important; }
+        }
+        @media (max-width: 1024px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: flex !important; }
+        }
+    </style>
+
+    
+
+<header class="page-hero" style="text-align: center; padding-top: 160px; padding-bottom: 80px; background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, transparent 100%); border-bottom: 1px solid var(--border-color); margin-bottom: 40px;">
+    <div class="container">
+        <span class="subheading">Who We Are</span>
+        <h1 style="margin-bottom: 24px;">About The Academy</h1>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">Discover our journey, our mission, and what makes us the premier gymnastics training center.</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="grid grid-cols-2 gap-8 items-center">
+        <div>
+            <span class="subheading">Academy Story</span>
+            <h2>A Legacy of Excellence</h2>
+            <p>Founded with the belief that every child deserves the opportunity to develop their physical and mental strength, our academy has grown from a small community gym to a state-of-the-art training facility.</p>
+            <p>We pride ourselves on offering the highest quality instruction in a supportive, challenging, and fun environment.</p>
+        </div>
+        <div class="image-reveal-wrapper">
+            <img src="assets/images/about_facility_1781704800816.png" alt="Academy Facility" class="rounded-image shadow-img" style="width: 100%; border-radius: var(--border-radius-lg);">
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--secondary-bg);">
+    <div class="container grid grid-cols-2 gap-8 items-center flex-md-col-reverse">
+        <div class="image-reveal-wrapper" style="animation-delay: 0.2s;">
+            <img src="assets/images/about_mission_1781704820711.png" alt="Academy Mission" class="rounded-image shadow-img" style="width: 100%; border-radius: var(--border-radius-lg);">
+        </div>
+        <div class="text-content">
+            <span class="subheading">Mission & Vision</span>
+            <h2>Empowering The Next Generation</h2>
+            <p>Our mission is to foster self-esteem, discipline, and physical fitness through the sport of gymnastics. We envision a community where every young athlete has the resources to achieve their dreams, whether that's mastering a handstand or competing on a national stage.</p>
+            <div style="text-align: center;">
+                <ul class="custom-list" style="margin: 24px auto 0; display: inline-block; text-align: left;">
+                    <li>Build character and confidence</li>
+                    <li>Ensure a safe, progressive learning environment</li>
+                    <li>Nurture individual talent and teamwork</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <div class="section-title text-center">
+        <span class="subheading">Safety First</span>
+        <h2>Our Safety Standards</h2>
+    </div>
+    <style>
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 1024px) {
+            .safety-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .safety-grid > div:last-child {
+                grid-column: 1 / -1;
+                justify-self: center;
+                width: calc(50% - 12px);
+            }
+        }
+        @media (max-width: 600px) {
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+            .safety-grid > div:last-child {
+                grid-column: 1 / -1;
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="safety-grid">
+        <div class="card premium-card hover-lift">
+            <h3 style="color: var(--primary-accent);">Certified Staff</h3>
+            <p>All coaches undergo rigorous safety certification and background checks.</p>
+        </div>
+        <div class="card premium-card hover-lift">
+            <h3 style="color: var(--primary-accent);">Premium Equipment</h3>
+            <p>We use state-of-the-art, Olympic-grade equipment regularly inspected for safety.</p>
+        </div>
+        <div class="card premium-card hover-lift">
+            <h3 style="color: var(--primary-accent);">Structured Ratios</h3>
+            <p>Strict coach-to-student ratios ensure every child receives personalized attention.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--primary-bg); border-top: 1px solid var(--border-color);">
+    <div class="container grid grid-cols-2 gap-8 items-center">
+        <div>
+            <span class="subheading">Our Approach</span>
+            <h2>Training Philosophy</h2>
+            <p style="margin-bottom: 24px; font-size: 16px; line-height: 1.6;">We believe in positive reinforcement and structured progression. Every child develops at their own pace, and our curriculum is designed to celebrate individual milestones while keeping athletes challenged and engaged.</p>
+            
+            <ul class="custom-list" style="display: flex; flex-direction: column; gap: 16px;">
+                <li>
+                    <strong>Individualized Attention:</strong> We tailor drills to accommodate each gymnast's unique biomechanics and learning style, ensuring safe and effective skill acquisition.
+                </li>
+                <li>
+                    <strong>Mental Resilience:</strong> Gymnastics is as much mental as it is physical. We actively teach athletes how to overcome fear, set goals, and perform under pressure.
+                </li>
+                <li>
+                    <strong>Long-Term Athletic Development:</strong> We prioritize joint health, proper landing mechanics, and overall longevity in the sport over rushed short-term gains.
+                </li>
+                <li>
+                    <strong>Holistic Growth:</strong> Beyond the gym, we aim to instill discipline, time-management, and teamwork skills that benefit our athletes in all areas of life.
+                </li>
+            </ul>
+        </div>
+        <div class="image-reveal-wrapper">
+            <img src="assets/images/coach_female_1781704842189.png" alt="Training Philosophy" class="rounded-image shadow-img" style="width: 100%; border-radius: var(--border-radius-lg);">
+        </div>
+    </div>
+</section>
+<footer style="background: var(--card-bg); padding: 80px 0 0 0; border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <div class="nav-brand" style="margin-bottom: 24px;">
+                        <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
+    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
+                    </div>
+                    <p>A premium Olympic gymnastics academy mixed with a modern child development platform.</p>
+                    <div class="social-icons" style="display: flex; gap: 16px; margin-top: 24px;">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 24px;">Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="about.html" style="color: var(--text-secondary);">About Us</a>
+                        <a href="programs.html" style="color: var(--text-secondary);">Programs</a>
+                        <a href="coaches.html" style="color: var(--text-secondary);">Our Coaches</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 24px;">Support</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="contact.html" style="color: var(--text-secondary);">Contact</a>
+                        <a href="pricing.html" style="color: var(--text-secondary);">Pricing</a>
+                        <a href="login.html" style="color: var(--text-secondary);">Parent Login</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 24px;">Contact Us</h3>
+                    <p>123 Olympic Training Blvd<br>Sports City, SC 12345</p>
+                    <p>info@gymnasticsacademy.com</p>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 80px; padding: 24px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary);">
+                &copy; 2026 Gymnastics & Acrobatics Training Center. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+
+    <button id="back-to-top" aria-label="Back to top" class="back-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+</body>
+</html>
+

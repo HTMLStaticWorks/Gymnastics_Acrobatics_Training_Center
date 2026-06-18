@@ -1,0 +1,59 @@
+/* dark-mode.css */
+[data-theme="dark"] {
+    --primary-bg: #101820;
+    --secondary-bg: #17212B;
+    --card-bg: #17212B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --border-color: #2A3B4C;
+    --secondary-accent: #A8DADC; /* Lighter teal for dark mode visibility */
+    --third-accent: #45B0A2;     /* Lighter green for dark mode visibility */
+}
+
+[data-theme="dark"] body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card, 
+[data-theme="dark"] .auth-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .navbar {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #4B5563;
+}
+
+[data-theme="dark"] .control-btn {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    border-color: var(--primary-accent);
+    color: var(--primary-accent);
+}
+
+[data-theme="dark"] .auth-divider::before,
+[data-theme="dark"] .auth-divider::after {
+    border-color: var(--border-color);
+}
+

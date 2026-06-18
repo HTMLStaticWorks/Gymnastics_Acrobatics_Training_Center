@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Progression Framework | Gymnastics & Acrobatics Training Center</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+<!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+        <div class="nav-brand">
+            <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
+    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
+        </div>
+        
+        <div class="nav-links" style="display: none;">
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Home <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                <div class="dropdown-menu">
+                    <a href="index.html" class="dropdown-item">Home 1</a>
+                    <a href="home-2.html" class="dropdown-item">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="programs.html" class="nav-link">Programs</a>
+            <a href="coaches.html" class="nav-link">Coaches</a>
+            <a href="progression-framework.html" class="nav-link">Progression Framework</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="dashboard.html" class="nav-link dashboard-icon-link" aria-label="Dashboard" style="display: none; padding: 8px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; height: 36px; width: 36px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </a>
+            <button class="control-btn" id="theme-toggle" aria-label="Toggle Dark Mode" style="width: 36px; height: 36px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button class="control-btn" id="rtl-toggle" aria-label="Toggle RTL" style="width: 36px; height: 36px; font-size: 12px; font-weight: 600;">RTL</button>
+            <a href="login.html" class="btn btn-primary" style="height: 44px; padding: 0 20px;">Login</a>
+            
+            <button class="control-btn mobile-menu-btn" style="display: none; width: 36px; height: 36px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        </div>
+    </nav>
+
+    <style>
+        @media (min-width: 1025px) {
+            .nav-links { display: flex !important; }
+            .mobile-menu-btn { display: none !important; }
+            .nav-actions .nav-link { display: block !important; }
+        }
+        @media (max-width: 1024px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: flex !important; }
+        }
+    </style>
+
+    
+
+<header class="page-hero" style="text-align: center; padding-top: 160px; padding-bottom: 80px; background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, transparent 100%); border-bottom: 1px solid var(--border-color); margin-bottom: 40px;">
+    <div class="container">
+        <span class="subheading">The Journey</span>
+        <h1 style="margin-bottom: 24px;">Progression Framework</h1>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">Our structured milestone system ensures every athlete builds a solid foundation before advancing to complex skills.</p>
+    </div>
+</header>
+
+<style>
+    .pathway-section { padding: 100px 0; }
+    .pathway-steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        position: relative;
+        margin-top: 64px;
+    }
+    /* Connecting line across all cards */
+    .pathway-steps::before {
+        content: '';
+        position: absolute;
+        top: 48px;
+        left: calc(12.5%);
+        width: 75%;
+        height: 2px;
+        background: linear-gradient(to right, var(--primary-accent), var(--third-accent), var(--highlight), var(--primary-accent));
+        z-index: 0;
+    }
+    .pathway-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+    .pathway-number {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 28px;
+        position: relative;
+        border: 3px solid transparent;
+        transition: transform 0.3s ease;
+        background: var(--card-bg);
+    }
+    .pathway-step:hover .pathway-number { transform: scale(1.12); }
+    .pathway-step:nth-child(1) .pathway-number { color: var(--primary-accent); box-shadow: 0 0 0 3px var(--primary-accent), 0 8px 30px rgba(231,111,81,0.3); }
+    .pathway-step:nth-child(2) .pathway-number { color: var(--third-accent); box-shadow: 0 0 0 3px var(--third-accent), 0 8px 30px rgba(42,157,143,0.3); }
+    .pathway-step:nth-child(3) .pathway-number { color: var(--highlight); box-shadow: 0 0 0 3px var(--highlight), 0 8px 30px rgba(233,196,106,0.3); }
+    .pathway-step:nth-child(4) .pathway-number { color: var(--primary-accent); box-shadow: 0 0 0 3px var(--primary-accent), 0 8px 30px rgba(231,111,81,0.5); }
+    .pathway-label {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: var(--text-secondary);
+    }
+    .pathway-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--text-primary);
+    }
+    .pathway-desc {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+        .pathway-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+        .pathway-steps::before { display: none; }
+    }
+    @media (max-width: 480px) {
+        .pathway-steps { grid-template-columns: 1fr; }
+    }
+</style>
+
+<section class="section container pathway-section" style="text-align: center;">
+    <span class="subheading">Structured Levels</span>
+    <h2 style="text-align: center;">Beginner to Advanced Pathway</h2>
+    <p style="max-width: 700px; margin: 16px auto 0; color: var(--text-secondary); text-align: center;">We break down complex skills into manageable, achievable steps. This builds confidence and ensures safety at every level.</p>
+
+    <div class="pathway-steps">
+        <div class="pathway-step">
+            <div class="pathway-number">01</div>
+            <span class="pathway-label">Foundation</span>
+            <p class="pathway-title">Level 1</p>
+            <p class="pathway-desc">Forward rolls, cartwheel prep, and balance basics to build body awareness.</p>
+        </div>
+        <div class="pathway-step">
+            <div class="pathway-number">02</div>
+            <span class="pathway-label">Core Skills</span>
+            <p class="pathway-title">Level 2</p>
+            <p class="pathway-desc">Handstands, bridges, bar pullovers, and fundamental strength conditioning.</p>
+        </div>
+        <div class="pathway-step">
+            <div class="pathway-number">03</div>
+            <span class="pathway-label">Intermediate</span>
+            <p class="pathway-title">Level 3</p>
+            <p class="pathway-desc">Back handspring prep, aerial awareness, and precision of movement.</p>
+        </div>
+        <div class="pathway-step">
+            <div class="pathway-number">04</div>
+            <span class="pathway-label">Elite</span>
+            <p class="pathway-title">Level 4+</p>
+            <p class="pathway-desc">Full twisting layouts, elite tumbling passes, and competition-ready routines.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--secondary-bg);">
+    <div class="container grid grid-cols-2 gap-8 items-center">
+        <div class="image-reveal-wrapper">
+            <img src="assets/images/skill_assessment_coach.png" alt="Coach assessing gymnast skill milestones" class="rounded-image shadow-img" style="width: 100%; border-radius: var(--border-radius-lg);">
+        </div>
+        <div class="text-content">
+            <span class="subheading">Assessment</span>
+            <h2>Skill Milestones</h2>
+            <p>Every athlete undergoes regular skill assessments. These are positive, encouraging evaluations designed to celebrate what they've mastered and identify what they are ready to learn next.</p>
+            <div style="text-align: center;">
+                <ul class="custom-list" style="margin: 24px auto 0; display: inline-block; text-align: left;">
+                    <li>Quarterly formal assessments</li>
+                    <li>Continuous coach feedback via Dashboard</li>
+                    <li>Positive reinforcement focus</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Digital Tracking Section -->
+<style>
+    .digital-tracking-section {
+        background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+    .glowing-orb {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(231,111,81,0.15) 0%, transparent 70%);
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .floating-tablet {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        border-radius: 24px;
+        box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+        animation: floatDevice 6s ease-in-out infinite;
+    }
+    @keyframes floatDevice {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+</style>
+
+<section class="digital-tracking-section">
+    <div class="glowing-orb"></div>
+    <div class="container grid grid-cols-2 gap-12 items-center">
+        <div class="text-content" style="position: relative; z-index: 2; margin-bottom: 60px;">
+            <div style="display: inline-block; padding: 6px 16px; background: rgba(42,157,143,0.15); border: 1px solid var(--third-accent); color: var(--third-accent); border-radius: 20px; font-weight: 600; font-size: 14px; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px;">Parent Portal</div>
+            <h2 style="font-size: 42px; margin-bottom: 24px; color: white;">Track Every Leap & Bound</h2>
+            <p style="font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.6;">Stay connected to your child's journey with our industry-leading Parent Dashboard. View real-time skill acquisition, upcoming milestone assessments, and coach feedback directly from your phone or tablet.</p>
+            <div style="text-align: center;">
+                <ul class="custom-list" style="margin: 0 auto 40px; display: inline-block; text-align: left;">
+                    <li style="color: white;">Live skill check-offs</li>
+                    <li style="color: white;">Video feedback from coaches</li>
+                    <li style="color: white;">Attendance & level tracking</li>
+                </ul>
+            </div>
+            <div style="text-align: center;">
+                <a href="login.html" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center;">Explore The Dashboard</a>
+            </div>
+        </div>
+        <div>
+            <img src="assets/images/tablet_dashboard.png" alt="Digital Progress Dashboard" class="floating-tablet">
+        </div>
+    </div>
+</section>
+
+<!-- Transformation Asymmetric Section -->
+<style>
+    .transformation-section {
+        padding: 120px 0 80px 0;
+        background: var(--bg-color);
+    }
+    .feature-bento-grid {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        gap: 40px;
+        align-items: stretch;
+    }
+    .bento-image-wrapper {
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        height: 100%;
+        min-height: 500px;
+    }
+    .bento-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+    }
+    .bento-image-wrapper:hover img {
+        transform: scale(1.03);
+    }
+    .bento-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: center;
+    }
+    .solid-bento-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        padding: 32px 32px 32px 40px;
+        border-radius: 16px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .solid-bento-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 6px; height: 100%;
+    }
+    .solid-bento-card.c1::before { background: var(--primary-accent); }
+    .solid-bento-card.c2::before { background: var(--highlight); }
+    .solid-bento-card.c3::before { background: var(--third-accent); }
+    
+    .solid-bento-card:hover {
+        transform: translateX(10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+    
+    @media (max-width: 992px) {
+        .feature-bento-grid { grid-template-columns: 1fr; }
+        .bento-image-wrapper { min-height: 400px; }
+        .solid-bento-card:hover { transform: translateY(-5px); }
+    }
+</style>
+
+<section class="transformation-section container">
+    <div style="text-align: center; margin-bottom: 56px;">
+        <span class="subheading">Beyond Skills</span>
+        <h2>The Total Transformation</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">Gymnastics is about more than just physical prowess. It's a foundation for lifelong success.</p>
+    </div>
+    
+    <div class="feature-bento-grid">
+        <div class="bento-image-wrapper">
+            <img src="assets/images/handstand_beam.png" alt="Gymnast performing handstand on beam">
+        </div>
+        
+        <div class="bento-cards-container">
+            <div class="solid-bento-card c1">
+                <h3 style="color: var(--primary-accent); margin-bottom: 12px; font-size: 24px;">01. Confidence</h3>
+                <p style="margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6;">Overcoming physical challenges translates directly into unstoppable self-belief in the classroom and beyond.</p>
+            </div>
+            <div class="solid-bento-card c2">
+                <h3 style="color: var(--highlight); margin-bottom: 12px; font-size: 24px;">02. Strength</h3>
+                <p style="margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6;">Building core power, supreme flexibility, and injury-preventing joint stability for lifelong physical health.</p>
+            </div>
+            <div class="solid-bento-card c3">
+                <h3 style="color: var(--third-accent); margin-bottom: 12px; font-size: 24px;">03. Discipline</h3>
+                <p style="margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6;">Learning the value of hard work, structured repetition, and the patience required to master the impossible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @media (max-width: 600px) {
+        .cert-card { padding: 60px 20px !important; }
+        .cert-btn { padding: 14px 20px !important; font-size: 15px !important; width: 100%; white-space: nowrap; }
+    }
+</style>
+<section class="section container">
+    <div class="card shadow-lg cert-card" style="padding: 80px 40px; background: linear-gradient(135deg, var(--card-bg) 0%, var(--primary-bg) 100%); border: 1px solid var(--border-color); text-align: center; position: relative; overflow: hidden;">
+        
+        <!-- Decorative Glow -->
+        <div style="position: absolute; width: 400px; height: 400px; background: var(--primary-accent); opacity: 0.05; filter: blur(80px); top: -150px; left: 50%; transform: translateX(-50%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
+        
+        <div style="position: relative; z-index: 1; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-size: 40px; margin-bottom: 20px; text-align: center;">Certification Roadmap</h2>
+            <p style="font-size: 18px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 40px; text-align: center;">Athletes earn official academy certificates and badges upon completing each level, which are proudly displayed directly in your Parent Dashboard.</p>
+            
+            <a href="register.html" class="btn btn-primary cert-btn" style="padding: 16px 48px; font-size: 18px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;">
+                Start Your Journey
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </div>
+</section>
+<footer style="background: var(--card-bg); padding: 80px 0 0 0; border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <div class="nav-brand" style="margin-bottom: 24px;">
+                        <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
+    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
+                    </div>
+                    <p>A premium Olympic gymnastics academy mixed with a modern child development platform.</p>
+                    <div class="social-icons" style="display: flex; gap: 16px; margin-top: 24px;">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 24px;">Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="about.html" style="color: var(--text-secondary);">About Us</a>
+                        <a href="programs.html" style="color: var(--text-secondary);">Programs</a>
+                        <a href="coaches.html" style="color: var(--text-secondary);">Our Coaches</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 24px;">Support</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="contact.html" style="color: var(--text-secondary);">Contact</a>
+                        <a href="pricing.html" style="color: var(--text-secondary);">Pricing</a>
+                        <a href="login.html" style="color: var(--text-secondary);">Parent Login</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 24px;">Contact Us</h3>
+                    <p>123 Olympic Training Blvd<br>Sports City, SC 12345</p>
+                    <p>info@gymnasticsacademy.com</p>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 80px; padding: 24px 0; border-top: 1px solid var(--border-color); color: var(--text-secondary);">
+                &copy; 2026 Gymnastics & Acrobatics Training Center. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+
+    <button id="back-to-top" aria-label="Back to top" class="back-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+</body>
+</html>
+
