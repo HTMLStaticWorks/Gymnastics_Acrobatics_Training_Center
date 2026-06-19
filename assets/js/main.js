@@ -5,13 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const htmlElement = document.documentElement;
 
     // Load saved theme or check OS preference
+    // Skip if this page forces light mode
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        htmlElement.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        htmlElement.setAttribute('data-theme', 'dark');
-        updateThemeIcon('dark');
+    const forceLightMode = htmlElement.hasAttribute('data-force-light');
+
+    if (!forceLightMode) {
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlElement.setAttribute('data-theme', 'dark');
+            updateThemeIcon('dark');
+        }
+    } else {
+        // Force light and update icon accordingly
+        htmlElement.setAttribute('data-theme', 'light');
+        updateThemeIcon('light');
     }
 
     if (themeToggleBtn) {

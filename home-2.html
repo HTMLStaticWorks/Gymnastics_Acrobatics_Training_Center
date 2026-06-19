@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container navbar-container">
-        <div class="nav-brand">
+        <a href="index.html" class="nav-brand" style="text-decoration: none;">
             <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
     <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
     <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
-        </div>
+        </a>
         
         <div class="nav-links" style="display: none;">
             <div class="dropdown">
@@ -336,16 +336,31 @@
                 <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; border-top: 4px solid var(--primary-accent); border-left: 4px solid var(--primary-accent); z-index: 1;"></div>
                 <div style="position: absolute; bottom: -20px; right: -20px; width: 100px; height: 100px; border-bottom: 4px solid var(--primary-accent); border-right: 4px solid var(--primary-accent); z-index: 1;"></div>
                 
-                <div class="reveal-wrapper scroll-reveal" style="position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); transform: perspective(1000px) rotateY(5deg); transition: transform 0.5s ease;" onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.02)'" onmouseout="this.style.transform='perspective(1000px) rotateY(5deg)'">
+                <div class="reveal-wrapper scroll-reveal progression-img-wrapper">
                     <div class="reveal-overlay"></div>
                     <img src="assets/images/gymnast_progression_leap.png" alt="Gymnastics Progression" class="reveal-img" style="width: 100%; display: block; position: relative; z-index: 2;">
                 </div>
             </div>
             
             <style>
-                .progression-text { padding-left: 20px; }
+                .progression-img-wrapper {
+                    position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); transform: perspective(1000px) rotateY(5deg); transition: transform 0.5s ease;
+                }
+                .progression-img-wrapper:hover {
+                    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+                }
+                [dir="rtl"] .progression-img-wrapper {
+                    transform: perspective(1000px) rotateY(-5deg);
+                }
+                [dir="rtl"] .progression-img-wrapper:hover {
+                    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+                }
+                
+                .progression-text { padding-left: 48px; }
+                [dir="rtl"] .progression-text { padding-left: 0; padding-right: 48px; }
+                
                 @media (max-width: 1024px) {
-                    .progression-text { padding-left: 0 !important; margin-top: 60px; }
+                    .progression-text { padding-left: 0 !important; padding-right: 0 !important; margin-top: 60px; }
                 }
             </style>
             <div class="progression-text">
@@ -480,7 +495,7 @@
                 <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">Hear directly from the families who have experienced our structured progression and professional coaching firsthand.</p>
             </div>
             
-            <div class="grid grid-cols-3 gap-8" style="margin-top: 48px;">
+            <div class="testimonials-grid" style="margin-top: 48px;">
                 <div class="glass-testimonial">
                     <div style="color: #FFD700; margin-bottom: 20px; font-size: 20px;">★★★★★</div>
                     <p style="font-style: italic; color: rgba(255,255,255,0.95); font-size: 18px; line-height: 1.6; margin-bottom: 32px; flex-grow: 1;">"The structured progression is amazing. My daughter knows exactly what she needs to achieve to move to the next level."</p>
@@ -524,13 +539,13 @@
         <div class="container">
             <div class="grid grid-cols-4 gap-8">
                 <div>
-                    <div class="nav-brand" style="margin-bottom: 24px;">
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 24px; text-decoration: none; display: flex;">
                         <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
     <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
     <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
-                    </div>
+                    </a>
                     <p>A premium Olympic gymnastics academy mixed with a modern child development platform.</p>
                     <div class="social-icons" style="display: flex; gap: 16px; margin-top: 24px;">
                         <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
@@ -574,6 +589,38 @@
     </button>
 
     <style>
+        /* Testimonials Grid - Responsive Centering */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        /* Tablet: 2-column with last card centered */
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid .glass-testimonial:last-child {
+                grid-column: 1 / -1;
+                max-width: calc(50% - 1rem);
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        /* Mobile: single column, fully centered */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid .glass-testimonial:last-child {
+                grid-column: auto;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+
         /* Block Reveal Animation Styles */
         .reveal-overlay {
             position: absolute;

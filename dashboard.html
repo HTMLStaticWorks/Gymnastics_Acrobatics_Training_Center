@@ -315,7 +315,7 @@
 
                 <!-- Payments Pane -->
                 <div id="payments" class="tab-pane">
-                    <div class="grid grid-cols-2 gap-6" style="margin-bottom: 24px;">
+                    <div class="grid grid-cols-2 gap-6 payments-top-grid" style="margin-bottom: 24px;">
                         <div class="card" style="background: var(--primary-accent); color: white;">
                             <p style="opacity: 0.9; margin-bottom: 8px;">Next Payment Due</p>
                             <h2 style="font-size: 36px; margin-bottom: 16px;">$185.00</h2>
@@ -438,6 +438,14 @@
 
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <style>
+        @media (max-width: 768px) {
+            .payments-top-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </body>
 </html>
 

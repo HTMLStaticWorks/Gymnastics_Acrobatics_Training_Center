@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
+
 </head>
 <body>
 <!-- Navbar -->
     <nav class="navbar">
         <div class="container navbar-container">
-        <div class="nav-brand">
+        <a href="index.html" class="nav-brand" style="text-decoration: none;">
             <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
     <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
     <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
-        </div>
+        </a>
         
         <div class="nav-links" style="display: none;">
             <div class="dropdown">
@@ -91,7 +91,14 @@
             <span class="subheading">Head Coach</span>
             <h2>Elena Rodriguez</h2>
             <p>With over 15 years of experience in elite gymnastics, Coach Elena brings a wealth of knowledge and a passionate teaching style to the academy. Formerly a national competitor, she specializes in advanced routines and mental conditioning.</p>
-            <div style="margin-top: 24px; text-align: center;">
+            <div style="text-align: start;">
+                <ul class="custom-list" style="margin: 24px 0 0 0; display: inline-block; text-align: start;">
+                    <li>Former National Team Competitor</li>
+                    <li>B.S. in Kinesiology & Sports Science</li>
+                    <li>10+ State Champions Coached</li>
+                </ul>
+            </div>
+            <div style="margin-top: 32px; text-align: start;">
                 <span class="badge badge-success" style="margin-right: 8px;">USAG Certified</span>
                 <span class="badge badge-success">Safesport Trained</span>
             </div>
@@ -238,6 +245,18 @@
         .philosophy-section { padding: 80px 0; }
         .philosophy-quote-mark { top: -40px; left: 50%; transform: translateX(-50%); font-size: 200px; }
     }
+
+    /* RTL Adjustments */
+    [dir="rtl"] .philosophy-quote-mark { left: auto; right: -40px; }
+    [dir="rtl"] .philosophy-text-content { padding-right: 0; padding-left: 60px; }
+    [dir="rtl"] .image-offset-bg { right: auto; left: -30px; }
+    [dir="rtl"] .image-offset-wrapper:hover .image-offset-bg { transform: translate(-10px, -10px); }
+
+    @media (max-width: 1024px) {
+        [dir="rtl"] .philosophy-text-content { padding-left: 0; }
+        [dir="rtl"] .philosophy-quote-mark { right: auto; }
+        [dir="rtl"] .image-offset-bg { left: -20px; }
+    }
 </style>
 
 <section class="philosophy-section">
@@ -285,13 +304,13 @@
         <div class="container">
             <div class="grid grid-cols-4 gap-8">
                 <div>
-                    <div class="nav-brand" style="margin-bottom: 24px;">
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 24px; text-decoration: none; display: flex;">
                         <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
     <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
     <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
-                    </div>
+                    </a>
                     <p>A premium Olympic gymnastics academy mixed with a modern child development platform.</p>
                     <div class="social-icons" style="display: flex; gap: 16px; margin-top: 24px;">
                         <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>

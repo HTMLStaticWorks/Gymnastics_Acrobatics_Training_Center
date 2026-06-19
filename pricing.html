@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-force-light>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
+
 </head>
 <body>
 <!-- Navbar -->
     <nav class="navbar">
         <div class="container navbar-container">
-        <div class="nav-brand">
+        <a href="index.html" class="nav-brand" style="text-decoration: none;">
             <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
     <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
     <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
-        </div>
+        </a>
         
         <div class="nav-links" style="display: none;">
             <div class="dropdown">
@@ -219,10 +219,26 @@
         font-weight: 500;
     }
     @media (max-width: 768px) {
-        .stats-grid { grid-template-columns: 1fr 1fr; }
-        .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 32px; }
-        .stat-item:nth-child(2n) { border-right: none; }
-        .stat-item:last-child { border-bottom: none; }
+        .stats-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        .stat-item {
+            border-right: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding: 28px 16px;
+        }
+        .stat-item:nth-child(2n) {
+            border-right: none;
+        }
+        .stat-item:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+        .stat-number {
+            font-size: 38px;
+        }
+        .stat-label {
+            font-size: 13px;
+        }
     }
 
     /* FAQ Section */
@@ -288,6 +304,18 @@
         transition: width 0.4s ease;
     }
     .faq-item.open .faq-accent-line { width: 100%; }
+
+    /* FAQ RTL Fixes */
+    [dir="rtl"] .faq-question {
+        text-align: right;
+        flex-direction: row-reverse;
+    }
+    [dir="rtl"] .faq-accent-line {
+        background: linear-gradient(to left, var(--primary-accent), var(--third-accent));
+    }
+    [dir="rtl"] .faq-answer {
+        text-align: right;
+    }
 </style>
 
 <section class="stats-banner" id="stats-section">
@@ -417,13 +445,13 @@ function toggleFaq(btn) {
         <div class="container">
             <div class="grid grid-cols-4 gap-8">
                 <div>
-                    <div class="nav-brand" style="margin-bottom: 24px;">
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 24px; text-decoration: none; display: flex;">
                         <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
     <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
     <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
-                    </div>
+                    </a>
                     <p>A premium Olympic gymnastics academy mixed with a modern child development platform.</p>
                     <div class="social-icons" style="display: flex; gap: 16px; margin-top: 24px;">
                         <a href="#" class="social-icon" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
