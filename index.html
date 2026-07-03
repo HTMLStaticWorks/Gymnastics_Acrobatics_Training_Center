@@ -16,10 +16,14 @@
     <nav class="navbar">
         <div class="container navbar-container">
         <a href="index.html" class="nav-brand" style="text-decoration: none;">
-            <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
-    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
-    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <svg class="brand-icon" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 12px; overflow: visible;">
+    <!-- Elegant Continuous Line Art Gymnast -->
+    <!-- Head -->
+    <circle cx="20" cy="8" r="3.5" stroke="var(--primary-accent)" stroke-width="2.5" fill="none"/>
+    <!-- Body and Limbs (Split Leap) -->
+    <path d="M 20 11.5 C 20 22, 16 26, 4 28 M 20 11.5 C 20 22, 24 26, 36 28 M 20 16 C 14 16, 8 12, 6 8 M 20 16 C 26 16, 32 12, 34 8" stroke="var(--primary-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Swirling Ribbon Effect -->
+    <path d="M 2 24 C 10 40, 30 40, 38 24 C 44 10, 30 2, 20 15 C 10 28, -4 20, 2 10" stroke="var(--secondary-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
         </a>
         
@@ -37,17 +41,10 @@
             <a href="progression-framework.html" class="nav-link">Progression Framework</a>
             <a href="pricing.html" class="nav-link">Pricing</a>
             <a href="contact.html" class="nav-link">Contact</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
         </div>
         
         <div class="nav-actions">
-            <a href="dashboard.html" class="nav-link dashboard-icon-link" aria-label="Dashboard" style="display: none; display: inline-flex; align-items: center; justify-content: center; height: 36px; width: 36px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-            </a>
             <button class="control-btn" id="theme-toggle" aria-label="Toggle Dark Mode" style="width: 36px; height: 36px;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
@@ -138,7 +135,7 @@
         </div>
         
         <div class="premium-curriculum-layout">
-            <div class="curriculum-pane" style="background-image: url('assets/images/preschool_gymnastics_1781703621250.png');">
+            <div class="curriculum-pane" style="background-image: url('assets/images/index_preschool_curriculum.png');">
                 <div class="curriculum-pane-overlay"></div>
                 <div class="curriculum-pane-content">
                     <div class="curriculum-pane-header">
@@ -275,7 +272,7 @@
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: #F59E0B;">
+                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: var(--highlight);">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -294,7 +291,7 @@
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: #F59E0B;">
+                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: var(--highlight);">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -313,7 +310,7 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: #F59E0B;">
+                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: var(--highlight);">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -332,7 +329,7 @@
                 <!-- Duplicate for Infinite Loop -->
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: #F59E0B;">
+                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: var(--highlight);">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -341,7 +338,7 @@
                     </div>
                     <p>"The coaching staff is incredible. My daughter has progressed from cartwheels to back handsprings in just six months!"</p>
                     <div class="testimonial-author">
-                        <img src="assets/images/gymnast_gold_medal.png" alt="Avatar">
+                        <img src="assets/images/index_testimonial_avatar.png" alt="Avatar">
                         <div>
                             <h4>Sarah Jenkins</h4>
                             <span>Parent of Level 3 Gymnast</span>
@@ -350,7 +347,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: #F59E0B;">
+                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: var(--highlight);">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -368,7 +365,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
-                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: #F59E0B;">
+                    <div class="rating-stars" style="display: flex; gap: 4px; margin-bottom: 16px; color: var(--highlight);">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -389,7 +386,7 @@
     </section>
 
     <!-- 3. Head Coaches -->
-    <section class="section glass-section" style="background-image: url('assets/images/facility_spring_floor.png');">
+    <section class="section glass-section" style="background-image: url('assets/images/index_facility_bg.png');">
         <div class="glass-overlay"></div>
         <div class="container" style="position: relative; z-index: 2;">
             <div class="section-title" style="color: white;">
@@ -430,7 +427,7 @@
                 </div>
                 
                 <div class="sticky-image-card" style="position: relative; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-top: 24px;">
-                    <img src="assets/images/coach_high_five.png" alt="Coach high fiving gymnast" style="width: 100%; height: 100%; min-height: 280px; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="assets/images/coaches_mentoring.png" alt="Coach high fiving gymnast" style="width: 100%; height: 100%; min-height: 280px; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
                         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
                             <div style="background: var(--primary-accent); width: 8px; height: 8px; border-radius: 50%;"></div>
@@ -465,10 +462,14 @@
             <div class="grid grid-cols-4 gap-8">
                 <div>
                     <a href="index.html" class="nav-brand" style="margin-bottom: 24px; text-decoration: none; display: flex;">
-                        <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
-    <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
-    <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <svg class="brand-icon" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 12px; overflow: visible;">
+    <!-- Elegant Continuous Line Art Gymnast -->
+    <!-- Head -->
+    <circle cx="20" cy="8" r="3.5" stroke="var(--primary-accent)" stroke-width="2.5" fill="none"/>
+    <!-- Body and Limbs (Split Leap) -->
+    <path d="M 20 11.5 C 20 22, 16 26, 4 28 M 20 11.5 C 20 22, 24 26, 36 28 M 20 16 C 14 16, 8 12, 6 8 M 20 16 C 26 16, 32 12, 34 8" stroke="var(--primary-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Swirling Ribbon Effect -->
+    <path d="M 2 24 C 10 40, 30 40, 38 24 C 44 10, 30 2, 20 15 C 10 28, -4 20, 2 10" stroke="var(--secondary-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
 </svg><span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
                     </a>
                     <p>A premium Olympic gymnastics academy mixed with a modern child development platform.</p>

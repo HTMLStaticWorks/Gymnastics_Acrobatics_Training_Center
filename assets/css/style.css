@@ -237,7 +237,7 @@ a {
 }
 
 .btn-primary:hover {
-    background-color: #D65A3D;
+    background-color: var(--primary-accent); filter: brightness(0.9);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(231, 111, 81, 0.4);
     color: #FFFFFF;
@@ -249,7 +249,7 @@ a {
 }
 
 .btn-secondary:hover {
-    background-color: #1A323D;
+    background-color: var(--secondary-accent); filter: brightness(0.9);
     transform: translateY(-2px);
     color: #FFFFFF;
 }
@@ -303,7 +303,7 @@ a {
 }
 
 .form-control::placeholder {
-    color: #A0AEC0;
+    color: var(--text-secondary);
 }
 
 /* Cards */
@@ -1029,7 +1029,7 @@ a {
 
 .badge-warning {
     background: rgba(233, 196, 106, 0.1);
-    color: #D4A373;
+    color: var(--highlight);
 }
 
 /* Mobile Dashboard */
@@ -1221,7 +1221,7 @@ footer .social-icon:hover {
 }
 
 .back-to-top:hover {
-    background: #D65A3D;
+    background: var(--primary-accent); filter: brightness(0.9);
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
@@ -2217,9 +2217,20 @@ footer .social-icon:hover {
 
 /* MERGED FROM pages.css */
 /* pages.css */
+.text-center {
+    text-align: center !important;
+}
+
 .page-hero {
     position: relative;
     background: transparent;
+}
+
+.page-hero h1,
+.page-hero h2,
+.page-hero .subheading,
+.page-hero p {
+    color: #FFFFFF !important;
 }
 
 .image-reveal-wrapper {

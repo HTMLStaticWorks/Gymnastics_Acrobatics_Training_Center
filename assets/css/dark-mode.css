@@ -33,7 +33,7 @@
 }
 
 [data-theme="dark"] .form-control::placeholder {
-    color: #4B5563;
+    color: var(--text-secondary);
 }
 
 [data-theme="dark"] .control-btn {

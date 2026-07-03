@@ -16,11 +16,15 @@
         <aside class="dashboard-sidebar">
             <div class="dashboard-logo">
                 <a href="index.html" class="nav-brand" style="text-decoration: none; display: flex;">
-                    <svg class="brand-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
-                        <path d="M10 30C10 30 16 14 20 14C24 14 30 30 30 30" stroke="var(--primary-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="6" r="5" fill="var(--secondary-accent)"/>
-                        <path d="M5 22L15 17M35 22L25 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                    </svg>
+                    <svg class="brand-icon" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 12px; overflow: visible;">
+    <!-- Elegant Continuous Line Art Gymnast -->
+    <!-- Head -->
+    <circle cx="20" cy="8" r="3.5" stroke="var(--primary-accent)" stroke-width="2.5" fill="none"/>
+    <!-- Body and Limbs (Split Leap) -->
+    <path d="M 20 11.5 C 20 22, 16 26, 4 28 M 20 11.5 C 20 22, 24 26, 36 28 M 20 16 C 14 16, 8 12, 6 8 M 20 16 C 26 16, 32 12, 34 8" stroke="var(--primary-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Swirling Ribbon Effect -->
+    <path d="M 2 24 C 10 40, 30 40, 38 24 C 44 10, 30 2, 20 15 C 10 28, -4 20, 2 10" stroke="var(--secondary-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+</svg>
                     <span style="display: inline-flex; align-items: center; letter-spacing: -0.02em; font-weight: 700;">Acro<span style="color: var(--primary-accent);">Gym</span></span>
                 </a>
             </div>
@@ -252,22 +256,22 @@
                                     <tr>
                                         <td>Mon, Oct 17</td>
                                         <td>Advanced Tumbling</td>
-                                        <td><span style="color: #10B981; font-weight: 500;">Present</span></td>
+                                        <td><span style="color: var(--third-accent); font-weight: 500;">Present</span></td>
                                     </tr>
                                     <tr>
                                         <td>Wed, Oct 12</td>
                                         <td>Core Strength Training</td>
-                                        <td><span style="color: #10B981; font-weight: 500;">Present</span></td>
+                                        <td><span style="color: var(--third-accent); font-weight: 500;">Present</span></td>
                                     </tr>
                                     <tr>
                                         <td>Fri, Oct 07</td>
                                         <td>Flexibility & Balance</td>
-                                        <td><span style="color: #EF4444; font-weight: 500;">Absent (Excused)</span></td>
+                                        <td><span style="color: var(--primary-accent); font-weight: 500;">Absent (Excused)</span></td>
                                     </tr>
                                     <tr>
                                         <td>Mon, Oct 03</td>
                                         <td>Advanced Tumbling</td>
-                                        <td><span style="color: #10B981; font-weight: 500;">Present</span></td>
+                                        <td><span style="color: var(--third-accent); font-weight: 500;">Present</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -326,7 +330,7 @@
                         <div class="card">
                             <h3 style="margin-bottom: 16px;">Payment Method</h3>
                             <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius); margin-bottom: 16px;">
-                                <div style="width: 40px; height: 24px; background: #1A1F36; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px; font-style: italic;">VISA</div>
+                                <div style="width: 40px; height: 24px; background: var(--secondary-accent); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px; font-style: italic;">VISA</div>
                                 <div style="flex: 1;">
                                     <p style="font-weight: 500; margin-bottom: 0;">Visa ending in 4242</p>
                                     <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 0;">Expires 12/28</p>
@@ -444,6 +448,19 @@
         @media (max-width: 768px) {
             .payments-top-grid {
                 grid-template-columns: 1fr !important;
+            }
+            #messages .card > div:first-child {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                width: 100% !important;
+            }
+            #messages .card h3 {
+                text-align: left !important;
+                margin-bottom: 0 !important;
+            }
+            #messages .card p, #messages .card span {
+                text-align: left !important;
             }
         }
     </style>
